@@ -6,4 +6,4 @@ Welcome to my personal portfolio project. This website serves as a showcase of m
 - HTML5
 - CSS3
 - JavaScript
-- React
+- C# ASP.NET
