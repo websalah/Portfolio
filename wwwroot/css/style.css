@@ -1,0 +1,319 @@
+body {
+    height: 100vh;
+    background-color: #2D3032;
+    color: white;
+    font-family: 'LeagueSpartan Medium';
+}
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.topnav {
+    background-color: #5006f1;
+    display: flex;
+    justify-content: space-between;
+}
+.logo {
+    display: inline-flex;
+}
+.topnav h2 {
+    font-family: "LeagueSpartan Bold";
+    padding: 10px;
+    display: inline-flex;
+    align-items: center;
+}
+.topnav h2 span {
+    color: #2D3032;
+}
+.topnav ul {
+    list-style-type: none;
+    display: flex;
+    flex-flow: row wrap;
+    padding: 10px;
+    align-items: center;
+}
+
+.topnav ul li {
+    padding-left: 20px;
+}
+.topnav ul li:hover {
+    color: #D2D3D3;
+
+}
+.page-1 {
+    position: sticky;
+}
+.info {
+    display: flex;
+    flex-flow: column wrap;
+}
+.info h3 {
+    font-size: 40px;
+    font-weight: 900;
+}
+.info h5, .header h5 {
+    font-size: 20px;
+    font-weight: 100;
+}
+.info p {
+    display: flex;
+    flex-wrap: wrap;
+}
+.info .btns {
+    margin-top: 5%;
+    display: flex;
+    justify-content: flex-start;
+}
+.info .btns a{
+    margin-right: 10px;
+    cursor: pointer;
+    text-decoration: none;
+}
+.info .btns #github {
+    position: relative;
+    font: 15px "LeagueSpartan Medium";
+    font-weight: 100;
+    padding: 10px 20px 10px 35px;
+    background-color: #5006f1;
+    border: 2px solid #5006f1;
+    border-radius: 5px;
+    border: none;
+    outline: none;
+    color: #fff;
+    transition: background-color 0.6s;
+}
+.info .btns #github:hover {
+    background-color: #4002c4;
+}
+.info .btns #contact {
+    font: 15px "LeagueSpartan Medium";
+    font-weight: 100;
+    padding: 10px 20px 10px 20px;
+    border-radius: 5px;
+    border: 2px solid #5006f1;
+    outline: none;
+    color: #5006f1;
+    transition: border 0.6s;
+}
+.info .btns #contact:hover {
+    border: 2px solid #fff;
+    color: #fff;
+}
+.intro .info img {
+    position: relative;
+    -webkit-transform: scaleX(-1);
+    transform: scaleX(-1);
+    bottom: 10px;
+    left: 180px;
+    width: 50px;
+    height: 30px;
+}
+
+.intro {
+    margin-top: 5%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.intro img {
+    width: 350px;
+    height: 350px;
+    pointer-events: none;
+}
+.intro #sketch-1 {
+    position: relative;
+    width: 30px;
+    height: 20px;
+    bottom: 20px;
+    left: -30px;
+}
+.media {
+    display: flex;
+    justify-content: space-evenly;
+}
+.socials {
+    width: 305.38px;
+    height: 180px;
+    display: flex;
+    align-items: center;
+}
+.null {
+    width: 350px;
+    height: 180px;
+}
+.socials a {
+    text-decoration: none;
+    color: #5006f1;
+}
+.socials i {
+    padding-right: 10px;
+    font-size: 20px;
+    transition: color 0.6s;
+}
+.socials i:hover {
+    color: #fff;
+}
+.page-2 {
+    position: sticky;
+    width: 100%;
+    height: 100%;
+    padding-top: 30px;
+    background-color: #464747;
+}
+.about {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.header {
+    height: 100%;
+    display: flex;
+    flex-flow: column wrap;
+    align-items: center;
+}
+.header * {
+    margin-bottom: 20px;
+}
+.header #read-more {
+    font: 15px "LeagueSpartan Medium";
+    font-weight: 100;
+    text-decoration: none;
+    padding: 10px 20px 10px 20px;
+    background-color: #5006f1;
+    border-radius: 5px;
+    border: none;
+    outline: none;
+    color: #fff;
+    transition: background-color 0.6s;
+}
+.header #read-more:hover {
+    background-color: #4002c4;
+}
+.page-3 {
+    padding: 20px 0 30px 0;
+    width: 100%;
+    height: 100%;
+    background-color: #212629;
+}
+.page-3 .title {
+    display: flex;
+    justify-content: center;
+}
+.wrapper-1, .wrapper-2 {
+    height: 50%;
+    font-size: 2.5vh;
+    text-align: center;
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: row;
+    align-items: center;
+}
+.page-3 h5 {
+    font-size: 3vh;
+    font-family: "LeagueSpartan Bold";
+    font-weight: 400;
+    transition: 0.6s;
+}
+.page-3 h5:hover {
+    text-decoration: underline;
+    text-decoration-color: #5006f1;
+    text-decoration-thickness: 2px;
+    text-underline-offset: 6px;
+    letter-spacing: 1px;
+}
+*::selection {
+    background-color: #3603a3;
+    color: #fff;
+}
+@media screen and (max-width: 690px){
+    .intro #sketch-1 {
+        position: relative;
+        width: 20px;
+        height: 15px;
+        bottom: 5px;
+        left: -10px;
+    }
+    .topnav {
+        background-color: #5006f1;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+    }
+    .topnav h2 {
+        font-family: "LeagueSpartan Light";
+    }
+    .intro {
+        align-items: center;
+        flex-direction: column-reverse;
+    }
+    .intro img {
+        margin-bottom: 5%;
+        width: 120px;
+        height: 120px;
+    }
+    .info h3 {
+        font-size: 30px;
+        font-family: "LeagueSpartan Light";
+    }
+    .info h5, .header h5 {
+        font-size: 15px;
+    }
+    .header p, .header a {
+        font-size: 2.5vh;
+    }
+    .socials {
+        height: 120px;
+        justify-content: center;
+    }
+    .null {
+        width: 0;
+        height: 0;
+    }
+    .wrapper-1 {
+        height: 45%;
+        flex-direction: column;
+        font-size: 2vh;
+    }
+    .wrapper-2 {
+        height: 45%;
+        flex-direction: column;
+        font-size: 2vh;
+    }
+    .wrapper-1 svg, .wrapper-2 svg {
+        width: 50px;
+        height: 50px;
+    }
+    .page-3 .title {
+        height: 5%;
+    }
+    .css, .html, .js, .react{
+        text-align: left;
+        display: flex;
+        justify-content: center;
+        flex-direction: row;
+        align-items: start;
+    }
+    .desc {
+        padding-left: 10px;
+        font-size: 2vh;
+    }
+
+    
+}
+@media screen and (max-height: 660px){
+    .page-1, .page-2, .page-3 {
+        display: inline-block;
+    }
+    .header * {
+        font-size: 4vh;
+    }
+    .header #read-more {
+        font-size: 3vh;
+        padding: 2vh;
+    }
+    .header {
+        flex-wrap: nowrap;
+    }
+}

@@ -1,0 +1,199 @@
+@model PortfolioWeb.ViewModels.PortfolioViewModel
+@{
+    ViewData["Title"] = "Home";
+}
+
+<style>
+    /* Adjusting the heights to support dynamic content rows without altering style.css directly */
+    .page-3 { height: auto !important; min-height: 100%; padding-bottom: 50px; }
+    .skill-row { 
+        height: auto; 
+        padding: 40px 0;
+        font-size: 2.5vh;
+        text-align: center;
+        display: flex;
+        justify-content: space-evenly;
+        flex-direction: row;
+        align-items: flex-start;
+    }
+    .skill-item {
+        text-align: left; 
+        display: flex; 
+        justify-content: center; 
+        flex-direction: row; 
+        align-items: start; 
+        width: 40%;
+    }
+    
+    .page-4, .page-5 {
+        position: relative;
+        width: 100%;
+        height: auto;
+        min-height: 100%;
+        padding-top: 50px;
+        padding-bottom: 50px;
+    }
+    .page-4 { background-color: #464747; } /* Experience matches About Me */
+    .page-5 { background-color: #212629; } /* Projects matches Skills */
+    
+    .section-title {
+        display: flex;
+        justify-content: center;
+        margin-bottom: 40px;
+    }
+    .section-title h1 { color: #fff; font-size: 2em; }
+    .section-title h1 span { color: #5006f1; }
+    
+    .card-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 30px;
+        width: 80%;
+        margin: 0 auto;
+    }
+    
+    .exp-card, .proj-card {
+        background-color: #2D3032;
+        padding: 30px;
+        border-radius: 10px;
+        width: 100%;
+        border-left: 5px solid #5006f1;
+        text-align: left;
+    }
+    .exp-card h3, .proj-card h3 { font-family: "LeagueSpartan Bold"; font-size: 24px; color: #fff; margin-bottom: 10px; }
+    .exp-card h5, .proj-card h5 { font-family: "LeagueSpartan Medium"; font-size: 18px; color: #5006f1; margin-bottom: 15px; }
+    .exp-card p, .proj-card p { font-family: "LeagueSpartan Light"; font-size: 16px; color: #D2D3D3; line-height: 1.5; }
+    
+    .proj-card a {
+        display: inline-block;
+        margin-top: 15px;
+        padding: 8px 15px;
+        background-color: #5006f1;
+        color: white;
+        text-decoration: none;
+        border-radius: 5px;
+        font-family: "LeagueSpartan Medium";
+        transition: 0.3s;
+    }
+    .proj-card a:hover { background-color: #4002c4; }
+    
+    /* Responsive overrides */
+    @@media screen and (max-width: 690px){
+        .skill-row { flex-direction: column; align-items: center; gap: 30px; }
+        .skill-row svg { width: 50px; height: 50px; }
+        .skill-item { width: 90%; }
+        .exp-card, .proj-card { width: 90%; }
+    }
+</style>
+
+<div class="page-1" id="home" style="height: 100%;width: 100%;">
+    <div class="topnav">
+        <div class="logo">
+        <svg width="64px" height="64px" viewBox="0 0 24.00 24.00" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M11 16L13 8" stroke="#ffffff" stroke-width="1.008" stroke-linecap="round"></path> <path d="M17 15L19.6961 12.3039V12.3039C19.8639 12.1361 19.8639 11.8639 19.6961 11.6961V11.6961L17 9" stroke="#ffffff" stroke-width="1.008" stroke-linecap="round" stroke-linejoin="round"></path> <path d="M7 9L4.32151 11.6785V11.6785C4.14394 11.8561 4.14394 12.1439 4.32151 12.3215V12.3215L7 15" stroke="#ffffff" stroke-width="1.008" stroke-linecap="round" stroke-linejoin="round"></path> </g></svg>
+        <h2>Salah<span>uddin</span></h2>
+        </div>
+        <ul>
+            <a href="#home" style="text-decoration: none;color: #fff;"><li>Home</li></a>
+            <a href="#about-me" style="text-decoration: none;color: #fff;"><li>About</li></a>
+            <a href="#my-skills" style="text-decoration: none;color: #fff;"><li>Skills</li></a>
+            <a href="#experience" style="text-decoration: none;color: #fff;"><li>Experience</li></a>
+            <a href="#projects" style="text-decoration: none;color: #fff;"><li>Projects</li></a>
+        </ul>
+    </div>
+    <div class="wrapper">
+        <div class="intro">
+            <div class="info">
+                <img id="sketch-1" src="images/sketch-2.png" alt="">
+                <h3 style="padding-bottom: 5px;">Hi, I'm Salahuddin</h3>
+                <h5 style="color:#5006f1;">Full-stack .NET Developer |</h5>
+                <p style="width: 250px;font-family:'LeagueSpartan Light'"><br/>I'm an aspiring full-stack developer mastering C#, ASP.NET, and modern frontend tools to create powerful web experiences.</p>
+                <div class="btns">
+                    <a id="github" href="https://www.github.com/websalah"><i style="font-size:1.5em;position:absolute;left:10px; bottom:25%;" class="fa fa-github"></i>Github</a>
+                    <a id="contact" href="mailto:salah6ibrahim@gmail.com">Email me</a>
+                </div>
+                <img src="images/sketch-4.png" alt="">
+            </div>
+            <img src="images/portrait.png" alt="Portrait">
+        </div>
+        <div class="media">
+            <div class="socials">
+                <a href="http://www.facebook.com/saladin0/" target="_blank"><i class="fa fa-facebook-official"></i></a>
+                <a href="http://www.instagram.com/slahxa/" target="_blank"><i class="fa fa-instagram"></i></a>
+                <a href="http://www.linkedin.com/in/websalah/" target="_blank"><i class="fa fa-linkedin"></i></a>
+            </div>
+            <div class="null"></div>
+        </div>
+    </div>
+</div>
+
+<div class="page-2" id="about-me">
+    <div class="about">
+        <div class="header">
+            <h1 style="color: #fff;">About <span style="color: #5006f1;">me</span></h1>
+            <svg width="145px" height="145px" viewBox="0 0 400 400" fill="none" xmlns="http://www.w3.org/2000/svg" stroke="#5006f1"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M142 125.853C155.049 97.8883 180.62 82.7645 200.381 78.4757C227.189 72.6575 249.859 84.0511 257.624 112.528C260.302 122.352 259.217 138.128 253.081 148.517C247.426 158.092 239.904 165.942 227.555 176.481C225.251 178.447 217.389 185.018 216.649 185.643C199.849 199.818 191.567 209.152 186.81 220.972C182.053 232.792 182.305 269.489 216.649 266.35" stroke="#5006f1" stroke-opacity="0.9" stroke-width="16" stroke-linecap="round" stroke-linejoin="round"></path> <path d="M198.744 315.68C198.744 317.274 198.744 319.614 198.744 322.7" stroke="#5006f1" stroke-opacity="0.9" stroke-width="16" stroke-linecap="round" stroke-linejoin="round"></path> </g></svg>
+            <h5>Full-stack Developer</h5>
+            <p style="width: 50%; text-align: center;">I'm a passionate developer focused on building scalable backend architectures and frontend user interfaces. Constantly exploring AI/ML and modern frameworks.</p>
+            <a href="#experience" id="read-more">View Experience</a>
+        </div>
+    </div>
+</div>
+
+<div class="page-3" id="my-skills">
+    <div class="section-title title">
+        <h1>My <span>Skills</span></h1>
+    </div>
+    
+    @{
+        var skillsList = Model.Skills.ToList();
+        for (int i = 0; i < skillsList.Count; i += 2)
+        {
+            <div class="skill-row">
+                @for (int j = 0; j < 2 && (i + j) < skillsList.Count; j++)
+                {
+                    var skill = skillsList[i + j];
+                    <div class="@skill.WrapperClass skill-item">
+                        @Html.Raw(skill.SvgIcon)
+                        <div class="desc" style="padding-left: 15px;">
+                            <h5 style="font-size: 3vh; font-family: 'LeagueSpartan Bold'; font-weight: 400; transition: 0.6s;">@skill.Name</h5>
+                            <p style="width: 250px;font-family:'LeagueSpartan Light';margin-top:5%;">@skill.Description</p>
+                        </div>
+                    </div>
+                }
+            </div>
+        }
+    }
+</div>
+
+<div class="page-4" id="experience">
+    <div class="section-title">
+        <h1>My <span>Experience</span></h1>
+    </div>
+    <div class="card-container">
+        @foreach (var exp in Model.Experiences)
+        {
+            <div class="exp-card">
+                <h3>@exp.Role</h3>
+                <h5>@exp.Company | @exp.Duration</h5>
+                <p>@exp.Description</p>
+            </div>
+        }
+    </div>
+</div>
+
+<div class="page-5" id="projects">
+    <div class="section-title">
+        <h1>My <span>Projects</span></h1>
+    </div>
+    <div class="card-container">
+        @foreach (var proj in Model.Projects)
+        {
+            <div class="proj-card">
+                <h3>@proj.Title</h3>
+                <h5>Tech Stack: @proj.TechStack</h5>
+                <p>@proj.Description</p>
+                <a href="@proj.GithubLink" target="_blank"><i class="fa fa-github"></i> View Repository</a>
+            </div>
+        }
+    </div>
+</div>
